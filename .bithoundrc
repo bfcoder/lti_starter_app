@@ -2,11 +2,8 @@
   "ignore": [
     "**/client/libs/**",
   ],
-  "test": [
-    "**/test/**",
-    "**/tests/**",
-    "**/spec/**",
-    "**/specs/**"
-  ],
+  "critics": {
+    "lint": {"engine": "eslint"}
+  },
   "packageJsonLocation": "client/package.json"
 }
