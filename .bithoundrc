@@ -1,6 +1,6 @@
 {
   "ignore": [
-    "**/client/libs/**",
+    "**/client/libs/**"
   ],
   "critics": {
     "lint": {"engine": "eslint"}
