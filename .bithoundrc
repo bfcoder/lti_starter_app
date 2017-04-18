@@ -3,8 +3,6 @@
     "**/client/libs/**",
   ],
   "critics": {
-    "lint": {
-      "engine": "eslint"
-    }
+    "lint": {"engine": "eslint"}
   }
 }
