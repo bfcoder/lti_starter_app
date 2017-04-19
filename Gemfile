@@ -73,7 +73,9 @@ group :development do
   gem "web-console"
 
   # linting
+  gem "eslintrb"
   gem "pronto"
+  gem "pronto-eslint", require: false
   gem "pronto-flay", require: false
   gem "pronto-rubocop", require: false
 end
