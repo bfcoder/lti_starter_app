@@ -71,6 +71,11 @@ group :development do
   gem "spring"
   gem "spring-watcher-listen"
   gem "web-console"
+
+  # linting
+  gem "pronto"
+  gem "pronto-flay", require: false
+  gem "pronto-rubocop", require: false
 end
 
 group :development, :test do
