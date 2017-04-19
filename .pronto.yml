@@ -1,0 +1,9 @@
+all:
+  exclude:
+    - 'spec/**/*'
+# exclude files for single runner
+eslint:
+  exclude:
+    - 'client/libs/**/*'
+max_warnings: 150
+verbose: true
