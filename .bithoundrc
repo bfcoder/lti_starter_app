@@ -1,0 +1,9 @@
+{
+  "ignore": [
+    "**/client/libs/**"
+  ],
+  "critics": {
+    "lint": {"engine": "eslint"}
+  },
+  "packageJsonLocation": "client/package.json"
+}

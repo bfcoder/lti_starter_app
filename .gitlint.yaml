@@ -1,0 +1,42 @@
+# Copyright 2013-2014 Sebastian Kreft
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#     http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+
+# Regular expression matchers like \d, \w, must be escaped as in \\d, \\w.
+# If you need to include a string like '{}' or '{foo}', you need to double the
+# braces, as in '{{}}' or '{{foo}}'. See the pylint configuration for an
+# example.
+
+# Sample output with the --format emacs option:
+# /home/skreft/opensource/git-lint/test/e2etest/data/rubocop/error.rb:1:4: C: Surrounding space missing for operator '='.
+rubocop:
+  command: rubocop
+  arguments:
+  - '--format'
+  - 'emacs'
+  - '--rails'
+  extensions:
+  - '.rb'
+  # The first component is the relpath, but it's not supported yet.
+  filter: "{filename}:(?P<line>{lines}):(?P<column>\\d+): (?P<severity>.+): (?P<message>.+)"
+  installation: "sudo gem install rubocop or visit https://github.com/bbatsov/rubocop"
+
+# Sample output:
+#  37:1   error  Expected indentation of 2 spaces but found 0  indent
+eslint:
+  extensions:
+  - .js
+  - .jsx
+  command: eslint
+  filter: "(?P<line>{lines}):(?P<column>\\d+)\\s+error\\s+(?P<message>.+)"
+  installation: "npm install -g eslint"
